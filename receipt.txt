@@ -1,0 +1,31 @@
+                OSS MOVIES ~ Movie Ticket
+Username: elt0khy
+Date: Tue Dec  1 22:58:32 2020
+Ticket ID: elt0khy_Tenet_D9_69:96
+Amount charged: 69.42
+Movie Chosen: Tenet
+Movie Timing: 69:96
+      OSS MOVIES ~ Movie Ticket
+Username: elt0khy
+Date: Wed Dec  2 00:10:54 2020
+Ticket ID: elt0khy_Mosul_I2_20:00
+Amount charged: 15
+Movie Chosen: Mosul
+Movie Timing: 20:00
+
+      OSS MOVIES ~ Movie Ticket
+Username: seli
+Date: Wed Dec  2 00:42:52 2020
+Ticket ID: seli_Iron Man 2_I2_02:00
+Amount charged: 15
+Movie Chosen: Iron Man 2
+Movie Timing: 02:00
+
+      OSS MOVIES ~ Movie Ticket
+Username: batee5a
+Date: Wed Dec  2 00:54:23 2020
+Ticket ID: batee5a_Iron Man 2_I3_02:00
+Amount charged: 15
+Movie Chosen: Iron Man 2
+Movie Timing: 02:00
+
