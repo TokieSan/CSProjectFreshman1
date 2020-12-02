@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 #include <unistd.h>
 #include "stdlib.h"
-#include "classesList.h"
 #include "distributer.h"
 
 int main(){
