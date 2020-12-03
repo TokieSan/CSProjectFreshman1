@@ -1,7 +1,7 @@
 class receipt {
 	private:
 		security sec;
-		wallet wal;
+		walletBig wal;
 	public:
 		void chargeHisWallet(string userName, double price) {
 			fstream file("transaction.txt", ios::in | ios::app);
@@ -18,25 +18,40 @@ class receipt {
 		  if(isVip) price = 25;
 
 		  if(wal.specialOrNot(name))  price-=(0.2*price);
+
+		  fstream walletTmp;
+		  walletTmp.open("wallet.txt", ios::in | ios::app);
+		  while (!walletTmp.eof()) 
+		  { 
+			string searchUser;
+			int walletMoney;
+			walletTmp >> searchUser;
+			if (searchUser == name) 
+			{ 
+				walletTmp >> walletMoney;
+				price -= walletMoney; 
+				break;
+			} 
+		  }
 			
 		  chargeHisWallet(name, price);
 
-		  fstream receipt;
-		  receipt.open("receipt.txt", ios::out | ios::app);
+		  fstream receiptTmp;
+		  receiptTmp.open("receipt.txt", ios::in | ios::app);
 
 		  fstream all_IDS;
-		  all_IDS.open("Receipts.txt", ios::out | ios::app);
+		  all_IDS.open("Receipts.txt", ios::in | ios::app);
 
 		  time_t ticketDate = time(NULL);
 		  string id = name + "_" + m + "_" + whichSeat + "_" + timing;
 
-		  receipt << "      OSS MOVIES ~ Movie Ticket\n" <<"Username: " << name<<"\nDate: "<< ctime(&ticketDate)<<"Ticket ID: "<<id<<"\nAmount charged: "<<price<<"\nMovie Chosen: "<<m<<"\nMovie Timing: "<<timing<<"\n\n";
+		  receiptTmp << "      OSS MOVIES ~ Movie Ticket\n" <<"Username: " << name<<"\nDate: "<< ctime(&ticketDate)<<"Ticket ID: "<<id<<"\nAmount charged: "<<price<<"\nMovie Chosen: "<<m<<"\nMovie Timing: "<<timing<<"\n\n";
 
 		  all_IDS << id << "\n";
 		sleep(1);
 		  cout<<"Your ticket ID is "<<id<<", please save it for future reference."<<endl;
 
-		  receipt.close();
+		  receiptTmp.close();
 		  all_IDS.close();
 		  sleep(1);
 		}		

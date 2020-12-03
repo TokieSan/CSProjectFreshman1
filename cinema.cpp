@@ -12,7 +12,7 @@ class cinema {
 		tmpSeats s;
 		sysObjects sys;
 		ux UX;
-		wallet Wallet;
+		walletBig Wallet;
 		movies Movies;
 	public:
 		/*
@@ -30,8 +30,9 @@ class cinema {
 			cout << "	2) Reserve a ticket\n";
 			cout << "	3) View your reservations\n";
 			cout << "	4) Register a new account\n";
-			cout << "	5) Exit\n" << endl;
-			int entries = 5;
+			cout << "	5) Refund a ticket\n";
+			cout << "	6) Exit\n" << endl;
+			int entries = 6;
 
 			cout << "Please write your choice: ";
 			cin >> response;
@@ -46,7 +47,8 @@ class cinema {
 				case -1:
 					mainMenu();	break;
 				case -3:
-					if(Client.personalInfo() == -1) mainMenu(); break;
+					if(Client.personalInfo() == -1) mainMenu(); 
+					break;
 			}
 
 		}				
@@ -78,8 +80,13 @@ class cinema {
 					}
 					break;
 				case 4:
-					if(Client.personalInfo() == -1) mainMenu(); break;
+					if(Client.personalInfo() == -1) mainMenu(); 
+					break;
 				case 5:
+					Wallet.returnTicket();
+					mainMenu();
+					break;
+				case 6:
 					sys.clearScreen(); UX.welcome();
 					cout << "\n\nThank you for your visit. Have a nice day!\n\n"; 
 					exit(2);

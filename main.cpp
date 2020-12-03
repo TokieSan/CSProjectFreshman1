@@ -7,11 +7,11 @@ int main(){
 
 	//sysObjects sys;
 	//ux UX;
-	cinema Cinema;
-	security Sec;
-	client Client;
+	cinema CinemaFull;
+	security SecFull;
+	client ClientFull;
 
-	Cinema.mainMenu();
+	CinemaFull.mainMenu();
 	return 0;
 }
 

@@ -1,0 +1,11 @@
+
+
+          Refund Ticket 
+Refund date: Fri Dec  4 00:19:52 2020
+
+ID of Ticket Refunded: elt0khy_Call_C6_12:00
+Balance added to wallet: 15          Refund Ticket 
+Refund date: Fri Dec  4 00:21:07 2020
+
+ID of Ticket Refunded: elt0khy_Call_C6_12:00
+Balance added to wallet: 15
