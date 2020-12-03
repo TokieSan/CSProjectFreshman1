@@ -16,14 +16,16 @@ class client {
 		int age, ccv;
 		long long cardNumber;
 		string expiry;
-		personalInfo << name << " ";
+		personalInfo << "\n" << name << " ";
 		cout << "Please enter your age: ";
 		cin >> age;
 		personalInfo << age << " ";
 		cout << "Enter your credit/ debit card number: "; cin >> cardNumber;
 		cout << "Write card's expiration date: "; cin >> expiry;
 		cout << "Write the CCV: "; cin >> ccv;
-		personalInfo << cardNumber << " " << expiry << " " << ccv << "\n";
+		srand(time(0));
+		double walletMoney = (rand()%1000000)/10;
+		personalInfo << cardNumber << " " << expiry << " " << ccv << " " << walletMoney << "\n";
 		personalInfo.close();
 		sec.encryptDecrypt("pInfo.txt");		
 
@@ -46,9 +48,3 @@ class client {
 
 };
 
-class wallet {
-	public:
-		/*
-		 * Here the managing for client's wallet
-		 */
-};

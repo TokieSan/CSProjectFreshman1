@@ -6,19 +6,14 @@ struct tmpSeats {
 	}
 };
 
-class movieInfo {
-	public:
-		/*
-		 * movies are here
-		 */
-};
-
 class cinema {
 	private:
 		int response, id;
 		tmpSeats s;
 		sysObjects sys;
 		ux UX;
+		wallet Wallet;
+		movies Movies;
 	public:
 		/*
 		 * The main menu here
@@ -46,7 +41,15 @@ class cinema {
 				cin >> response;
 			}
 		}
-						
+		void reserveAMovieShortcut() {
+			switch(reserve.movieRegistration("Movies.txt")) {
+				case -1:
+					mainMenu();	break;
+				case -3:
+					if(Client.personalInfo() == -1) mainMenu(); break;
+			}
+
+		}				
 		void mainMenu() {
 			/*
 			 * Here choosing from main menu and redirection for the 
@@ -55,15 +58,27 @@ class cinema {
 			cout << "\nHow can I help you today? :)\n\n";
 			mainMenuData();
 			switch(response) {
-				case 2:
-					switch(reserve.movieRegistration("Movies.txt")) {
-						case -1:
-							mainMenu();	
-						case -3:
-							if(Client.personalInfo() == -1) mainMenu();
+				case 1:
+					switch(Movies.moviesInfo()) {
+						case 2:
+							mainMenu(); break;
+						case 1:
+							reserveAMovieShortcut();
+
 					}
+				case 2:
+					reserveAMovieShortcut();
+					break;
+				case 3:
+					switch(Wallet.viewReservation()){
+						case 1:
+							reserveAMovieShortcut(); break;	
+						case 2:
+							mainMenu(); break;
+					}
+					break;
 				case 4:
-					if(Client.personalInfo() == -1) mainMenu();
+					if(Client.personalInfo() == -1) mainMenu(); break;
 				case 5:
 					sys.clearScreen(); UX.welcome();
 					cout << "\n\nThank you for your visit. Have a nice day!\n\n"; 

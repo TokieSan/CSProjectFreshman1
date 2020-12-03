@@ -245,7 +245,7 @@ class seats {
 			string timO = getMyTiming(m);
 			bool is_vip=false;
 			if(s[0]=='I' || s[0]=='J')
-				is_vip==true;
+				is_vip=true;
 			cout << "\n";
 			rec.receiptDo(buyerName, m, s, timO, is_vip);
 			modifySeats (movieRegister, film, arr);
