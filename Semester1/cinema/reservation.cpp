@@ -1,10 +1,10 @@
-
+//A struct of name movie contains two 2-dimensional string arrays to store the normal and vip seats
 struct movie
 {
     string normal[8][7];
     string vip[2][7];
 };
-
+//Seats class that includes seat reservation procedure
 class seats {
 	private:
 		ux UX;
@@ -12,6 +12,7 @@ class seats {
 		security sec;
 		receipt rec;
 	public:
+		//Function to read the movies stored in a file and display them to the user to select one from them
 		void displayMovies(string m) {
 
 			ifstream myMovies("MoviesInfo.txt");
@@ -25,6 +26,9 @@ class seats {
 			}
 			cout << "\n";
 		}
+		/*Function that checks if the user is already registered with his username,
+		 encrypt his data and store it in a file
+		 */
 		bool checkUser(string userName) {
 			sec.encryptDecrypt("pInfo.txt");
 			ifstream myFile("pInfo.txt");
@@ -38,7 +42,7 @@ class seats {
 			sec.encryptDecrypt("pInfo.txt");
 			return false;
 		}
-			
+		//Function that checks if the user has registered with his username
 		string getHisUserName() {
 			cout << "\nPlease Enter your username: ";
 			string userName; cin >> userName;
@@ -48,6 +52,7 @@ class seats {
 			}
 			return userName;
 		}
+		//Function that displays the movie to the user and asks it to choose the movie he wants
 		string ChooseMovie()
 		{
 			sys.clearScreen();
@@ -60,7 +65,7 @@ class seats {
 			getline(cin,movie);
 			return movie;
 		}
-
+		//Function that returns the user to the main menu again after finishing reservation
 		int afterReserve() {
 			/*
 			 * Receipt stuff here
@@ -70,6 +75,7 @@ class seats {
 			cin >> inputToReturn;
 			return -1*inputToReturn;
 		}
+		//Searching for the movie entered by the user to check if it is found in the list
 		int searchMovie (string film[], string m)
 		{
 			for (int i = 0; i<20; i++)
@@ -82,6 +88,7 @@ class seats {
 			}
 			  return -1;
 		}
+		//Asking the user to choose a seat
 		string ChooseSeat ()
 		{
 			string seat;
@@ -89,6 +96,7 @@ class seats {
 			cin >> seat;
 			return seat;
 		}
+		//Displaying the available seats to the user
 		void displaySeats(movie arr[] , int count)
 		{
 			
@@ -116,9 +124,12 @@ class seats {
 				cout <<"\n\n";
 			
 		}
-
+		/*Searching for the seat entered by the user to check if available,
+		and if so whether normal or vip, and reserving that seat
+		*/
 		void searchSeat (movie arr[], int count, string s)
 		{
+			//Checking if the seat is a normal seat and reserving it
 			int c = 0;
 			for (int i = 0; i < 8; i++)
 			{
@@ -132,6 +143,7 @@ class seats {
 					}  
 				}
 			}
+			//Checking if the seat is vip and reserving it
 			int b = 0;
 			 for (int i = 0; i < 2; i++)
 			{
@@ -145,13 +157,16 @@ class seats {
 					}  
 				}
 			}
-			
+			/*In case the seat is not available, displaying message to the user
+			and asking to choose a seat again
+			*/
 			if (b==0 && c==0) {
 				cout <<"\nSorry! Seat is unavailable "<<endl;
 				string newSeat = ChooseSeat();
 				searchSeat(arr, count, newSeat);
 			}
 		}
+		//Modifying the seats stored in the file after each reservation
 		void modifySeats (string movieRegister, string film[], movie arr[])
 		{
 			ofstream myfile (movieRegister);
@@ -177,6 +192,7 @@ class seats {
 			}
 			 myfile.close();
 		}
+		//
 		string getMyTiming(string m) {
 			ifstream movieTime("MoviesInfo.txt");
 			string timing;
