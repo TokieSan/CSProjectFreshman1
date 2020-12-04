@@ -1,3 +1,4 @@
+//struct tmpSeats includes variables seat and price, price depends on type of seat
 struct tmpSeats {
 	double price;
 	string seat;
@@ -5,7 +6,7 @@ struct tmpSeats {
 		price = p;
 	}
 };
-
+//cinema class, contains func of main menu, viewing reservations, refunding, etc.
 class cinema {
 	private:
 		int response, id;
@@ -37,6 +38,7 @@ class cinema {
 			cout << "Please write your choice: ";
 			cin >> response;
 
+			//nagging code, tells user he/she has to enter number from 1 to 6
 			while (response>entries || response<1) {
 				cout << "Can you please enter a valid choice? ";
 				cin >> response;
