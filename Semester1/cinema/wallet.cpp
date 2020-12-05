@@ -22,7 +22,6 @@ class walletBig {
 				getline(all_IDS, id);
 				if(fastCheckSub(userNameSub, id))
 					cout << "	- " << id << "\n";
-				sleep(1);
 			}
 			sleep(1);
 			cout << "\nWhat do you want right now?\n	1) Reserve a ticket\n	2) Back to the main menu\n";

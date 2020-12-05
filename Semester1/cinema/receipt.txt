@@ -117,3 +117,19 @@ Amount charged: 15
 Movie Chosen: Tenet
 Movie Timing: 10:00
 
+      OSS MOVIES ~ Movie Ticket
+Username: selim
+Date: Sat Dec  5 18:29:48 2020
+Ticket ID: selim_Call_D4_12:00
+Amount charged: 15
+Movie Chosen: Call
+Movie Timing: 12:00
+
+      OSS MOVIES ~ Movie Ticket
+Username: Ahmed
+Date: Sat Dec  5 18:31:51 2020
+Ticket ID: Ahmed_Tenet_I6_10:00
+Amount charged: 25
+Movie Chosen: Tenet
+Movie Timing: 10:00
+
