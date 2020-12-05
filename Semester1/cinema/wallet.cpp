@@ -89,14 +89,12 @@ class walletBig {
 				cin >> searchID;
 				if(isTicketVip(searchID)) refunded = 25;
 				if(specialOrNot(newUserName)) refunded-=(0.2*refunded);
-				bool x;
+				bool x = true;
 				while (!all_IDS.eof())
 				{
 					all_IDS >> fileID;
-					x = true;
 					if (searchID == fileID)
 					{
-
 						refundReceipts << "          Refund Ticket \nRefund date: " << ctime(&ticketDate) << "\nID of Ticket Refunded: " << searchID << "\nBalance added to wallet: " << refunded;
 						//calls func wallet() to store refunded money & ticket ID
 						wallet(refunded, searchID);
@@ -106,15 +104,16 @@ class walletBig {
 
 					}
 				}
-				if(x) {
-						cout << "\n\nTicket ID not found, sending you to the main menu...\n";
-					}
+				
 
 			}
 			else if (yesOrNo == 2) {
 				cout << "You've chosen to cancel the refunding process. Thank you for using OSS Cinemas!";
 			} else {
 				cout << "The number you entered is invalid. \n";
+			}
+			if(x) {
+						cout << "\n\nTicket ID not found, sending you to the main menu...\n";
 			}
 			all_IDS.close();
 			refundReceipts.close();
