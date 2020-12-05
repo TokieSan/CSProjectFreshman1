@@ -84,23 +84,25 @@ class walletBig {
 				cin >> searchID;
 				if(isTicketVip(searchID)) refunded = 25;
 				if(specialOrNot(newUserName)) refunded-=(0.2*refunded);
-
+				bool x;
 				while (!all_IDS.eof())
 				{
 					all_IDS >> fileID;
+					x = true;
 					if (searchID == fileID)
 					{
 
 						refundReceipts << "          Refund Ticket \nRefund date: " << ctime(&ticketDate) << "\nID of Ticket Refunded: " << searchID << "\nBalance added to wallet: " << refunded;
 						wallet(refunded, searchID);
 						cout << "\nNow you are done! sending you to the main menu...\n";
+						x = false;
 						break;
 
 					}
-					else {
+				}
+				if(x) {
 						cout << "\n\nTicket ID not found, sending you to the main menu...\n";
 					}
-				}
 
 			}
 			else if (yesOrNo == 2) {
