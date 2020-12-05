@@ -100,7 +100,7 @@ class walletBig {
 
 					}
 				}
-				if(x == true) {
+				if(x) {
 						cout << "\n\nTicket ID not found, sending you to the main menu...\n";
 					}
 
