@@ -133,3 +133,19 @@ Amount charged: 25
 Movie Chosen: Tenet
 Movie Timing: 10:00
 
+      OSS MOVIES ~ Movie Ticket
+Username: elt0khy
+Date: Sat Dec  5 18:42:09 2020
+Ticket ID: elt0khy_Mosul_D4_20:00
+Amount charged: 15
+Movie Chosen: Mosul
+Movie Timing: 20:00
+
+      OSS MOVIES ~ Movie Ticket
+Username: elt0khy
+Date: Sat Dec  5 18:42:40 2020
+Ticket ID: elt0khy_Iron Man 2_I5_02:00
+Amount charged: 25
+Movie Chosen: Iron Man 2
+Movie Timing: 02:00
+

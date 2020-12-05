@@ -1,3 +1,5 @@
 aisha: -15
 selim: -15
 Ahmed: -25
+elt0khy: -15
+elt0khy: -25

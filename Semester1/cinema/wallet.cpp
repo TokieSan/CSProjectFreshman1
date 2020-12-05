@@ -41,7 +41,7 @@ class walletBig {
 			while (!all_IDS.eof())
 			{
 				all_IDS >> tmpStr;
-				if (tmpStr == userName)
+				if (fastCheckSub(userName, tmpStr))
 					countCustomer++;
 			}
 			all_IDS.close();

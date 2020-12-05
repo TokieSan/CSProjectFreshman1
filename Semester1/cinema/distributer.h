@@ -7,6 +7,5 @@
 #include "client.cpp"
 #include "cinema.cpp"
 /*
- * Here mapping the helper files is done & any extra classes
- * will be implemented
+ * List of assist files
  */
