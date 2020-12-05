@@ -192,7 +192,7 @@ class seats {
 			}
 			 myfile.close();
 		}
-		//
+
 		string getMyTiming(string m) {
 			ifstream movieTime("MoviesInfo.txt");
 			string timing;

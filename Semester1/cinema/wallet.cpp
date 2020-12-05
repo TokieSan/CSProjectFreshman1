@@ -1,11 +1,14 @@
+
 class walletBig {
 	public:
+		//compare username and ticket ID to see if username is subset of ID
 		bool fastCheckSub(string sub, string dom) {
 			for(int i=0; i<(int)sub.length(); i++) {
 				if(sub[i]!=dom[i]) return false;
 			}
 			return true;
 		}
+		
 		int viewReservation()
 		{
 			string userNameSub;
@@ -29,7 +32,7 @@ class walletBig {
 			return tmpNew;
 
 		}
-
+		//check if user qualifies for 20% discount acc. to no. of tickets purchased
 		bool specialOrNot(string userName)
 		{
 			fstream all_IDS;
@@ -49,6 +52,7 @@ class walletBig {
 				return false;
 
 		}
+		//check if seat is a normal one or VIP acc. to seat
 		bool isTicketVip(string id) {
 			int ch =0;
 			for(int i=0; i<(int)id.length(); i++) {
@@ -60,6 +64,7 @@ class walletBig {
 			}
 			return false;
 		}
+		//refunds user's money into file "wallet", money to be deducted in next purchase
 		void returnTicket()
 		{
 			cout << "\nYou've chosen to return and refund your ticket!\n\nPlease enter '1' to confirm, or '2' to cancel: ";
@@ -93,6 +98,7 @@ class walletBig {
 					{
 
 						refundReceipts << "          Refund Ticket \nRefund date: " << ctime(&ticketDate) << "\nID of Ticket Refunded: " << searchID << "\nBalance added to wallet: " << refunded;
+						//calls func wallet() to store refunded money & ticket ID
 						wallet(refunded, searchID);
 						cout << "\nNow you are done! sending you to the main menu...\n";
 						x = false;
@@ -115,7 +121,7 @@ class walletBig {
 			sleep(2);
 		}
 
-
+		//saves ticket ID and wallet money for later use
 		void wallet(int walletBalance, string searchID)
 		{
 			fstream wallet;
