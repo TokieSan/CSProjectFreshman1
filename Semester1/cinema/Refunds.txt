@@ -8,4 +8,20 @@ Balance added to wallet: 15          Refund Ticket
 Refund date: Fri Dec  4 00:21:07 2020
 
 ID of Ticket Refunded: elt0khy_Call_C6_12:00
+Balance added to wallet: 15          Refund Ticket 
+Refund date: Sat Dec 05 13:15:44 2020
+
+ID of Ticket Refunded: aisha_Tenet_G6_10:00
+Balance added to wallet: 15          Refund Ticket 
+Refund date: Sat Dec 05 13:18:24 2020
+
+ID of Ticket Refunded: Zizoyehia_Tenet_J6_10:00
+Balance added to wallet: 15          Refund Ticket 
+Refund date: Sat Dec 05 13:19:51 2020
+
+ID of Ticket Refunded: Zizoyehia_Tenet_J6_10:00
+Balance added to wallet: 15          Refund Ticket 
+Refund date: Sat Dec 05 13:40:42 2020
+
+ID of Ticket Refunded: aisha_Tenet_E4_10:00
 Balance added to wallet: 15
