@@ -5,13 +5,9 @@
 
 int main(){
 
-	//sysObjects sys;
-	//ux UX;
 	cinema CinemaFull;
-	security SecFull;
-	client ClientFull;
-
 	CinemaFull.mainMenu();
+	
 	return 0;
 }
 
