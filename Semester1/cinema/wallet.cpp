@@ -104,6 +104,9 @@ class walletBig {
 
 					}
 				}
+				if(x) {
+						cout << "\n\nTicket ID not found, sending you to the main menu...\n";
+			}
 				
 
 			}
@@ -112,9 +115,7 @@ class walletBig {
 			} else {
 				cout << "The number you entered is invalid. \n";
 			}
-			if(x) {
-						cout << "\n\nTicket ID not found, sending you to the main menu...\n";
-			}
+			
 			all_IDS.close();
 			refundReceipts.close();
 			sleep(2);
